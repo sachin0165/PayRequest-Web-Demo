@@ -1,0 +1,245 @@
+body{
+	margin: 0;
+	padding: 0;
+}
+#main-container{
+	padding: 10px 0 0 0;
+	position: relative;
+}
+.container{
+	margin: auto;
+	width: 80%;
+	height: 600px;
+	border: 2px solid #666666;
+	border-radius:  0 0 10px 10px;
+	border-top: none;
+}
+.header{
+	margin-top: 20px;
+	background-color: #424242;
+    height: 30px;
+    display: block;
+    width: 80%;
+    margin: auto;
+    border-radius: 10px 10px 0 0;
+}
+.dots-class{
+	padding: 6px;
+}
+.header .dots{
+	display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: #666666;
+    border-radius:  50%;
+}
+.nav-header-desktop{
+	background-color: #026db8;
+	border: 1px solid black;
+	height: 50px;
+	display: block;
+}
+.logo-header{
+	display: inline-block;
+	vertical-align: middle;
+	height: 100%;
+}
+.logo-header a{
+	color: white;
+	font-size: 36px;
+    text-decoration: none;
+    padding: 0 20px;
+}
+.nav-desktop{
+	display: inline-block;
+}
+.nav-desktop a{
+	color: white;
+	text-decoration: none;
+	font-size: 16px;
+  font-weight: lighter;
+  padding: 10px;
+}
+.nav-desktop .active{
+	border-bottom: 1px solid white;
+}
+.logout{
+	display: inline-block;
+	float: right;
+}
+.logout a{
+	color: white;
+	text-decoration: none;
+	font-size: 16px;
+  font-weight: lighter;
+  padding: 15 50px;
+  line-height: 3;
+}
+.pop-up{
+	margin: auto;
+    width: 70%;
+    background-color: #ffffff;
+    box-shadow: 0 0 20px rgb(2 2 4 / 20%);
+    border-radius: 5px;
+    z-index: 1;
+    margin-top: 100px;
+}
+.form-head{
+	border-bottom: 2px solid #f3f3f3;
+	text-align: center;
+}
+.form-head h2{
+   margin: 0;
+   padding: 10px 10px 5px 10px;
+   font-size: 20px;
+}
+.form-head p{
+   margin: 0;
+   padding: 10px 10px 5px 10px;
+   font-size: 15px;
+}
+.form-body{
+	text-align: center;
+	padding: 20px;
+}
+.form-body p{
+  margin: 0;
+}
+.form-top{
+   padding-bottom: 10px;
+   font-size: 14px;
+}
+.canceled{
+   background-color: #fdb6b1;
+   color: #cf4d4b;
+    border: none;
+    height: 40px;
+    width: 130px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 0 15px;
+    margin: 10px;
+}
+.form-buttom{
+font-weight: bold;
+    padding: 10px 0 20px 0;
+    font-size: 22px;
+}
+.form-canceled{
+	padding-bottom: 20px;
+}
+.nav {
+  height: 50px;
+  width: 100%;
+  background-color: #026db8;
+  position: relative;
+}
+
+.nav > .nav-header {
+  display: inline;
+}
+
+.nav > .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 30px;
+  color: #fff;
+  padding: 5px 10px 5px 10px;
+}
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: inline;
+  float: right;
+  font-size: 18px;
+}
+
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  color: #efefef;
+}
+
+.nav > .nav-links > a:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.nav > #nav-check {
+  display: none;
+}
+.mobile-nav{
+		display: none;
+}
+@media screen and (max-width: 480px) {
+	.form-head p{
+		font-size: 12px;
+	}
+}
+@media screen and (max-width: 375px) {
+	.form-head p{
+		font-size: 8px;
+	}
+}
+@media screen and (max-width: 576px) {
+	.container{
+      width: 95%;
+	}
+	.header{
+     width: 95%;
+	}
+	.pop-up{
+		width: 90%;
+		margin-top: 50px;
+	}
+}
+@media (max-width:768px) {
+	.desktop-nav{
+		display: none;
+	}
+	.mobile-nav{
+		display: block;
+	}
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    padding: 12px;
+  }
+  
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 6px;
+    border-top: 3px solid #eee;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #333;
+    height: 0px;
+    transition: all 0.3s ease-in;
+ 
+    top: 50px;
+    left: 0px;
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+  }
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+    display: none;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: 150px;
+  }
+}

@@ -1,0 +1,24 @@
+<div class="main-wrapper popup-wrap" fxLayout="row" fxLayoutAlign="center center">
+  <mat-card class="box">
+    <mat-card-header>
+      <mat-card-title>Login with Wallet</mat-card-title>
+    </mat-card-header>
+    <form class="example-form" #f="ngForm" (ngSubmit)="onLogin(f)" novalidate>
+      <mat-card-content>
+        <mat-form-field class="example-full-width">
+          <input class="input-area" matInput placeholder="Wallet name" type="text" name="walletname" ngModel required #walletname="ngModel">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <input class="input-area" matInput placeholder="Password" type="password" name="password" ngModel required #password="ngModel">
+        </mat-form-field>
+      </mat-card-content>
+
+      <div class="footer-btn-area">
+        <button id="login-pop-close" mat-button mat-dialog-close class="btn-cancel">Cancel</button>
+        <button type="submit" mat-stroked-button color="accent" class="btn-block btn-login">Log in</button>
+      </div>
+
+    </form>
+    
+  </mat-card>
+</div>

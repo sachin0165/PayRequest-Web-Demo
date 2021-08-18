@@ -1,0 +1,47 @@
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <div id="main-container">
+
+    <div class="container createpayment-area">
+      <form class="example-form" #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
+        <mat-card-content>
+          <div class="pop-up">
+            <mat-card-content>
+              <mat-form-field class="example-full-width">
+                <label class="create-label">From</label>
+                <input matInput placeholder="From" type="text" name="From" [(ngModel)]="userWallet" #From="ngModel">
+              </mat-form-field>
+              <mat-form-field class="example-full-width">
+                <label class="create-label">Amount (SRC)</label>
+                <input matInput placeholder="Amount (SRC)" type="text" name="Amount" ngModel required #Amount="ngModel">
+              </mat-form-field>
+              <mat-form-field class="example-full-width">
+                <label class="create-label">To</label>
+                <input matInput placeholder="To" type="text" name="To" ngModel required #To="ngModel">
+              </mat-form-field>
+
+              <mat-form-field class="example-full-width">
+                <label class="create-label">Reason</label>
+                <input matInput placeholder="Reason" type="text" name="Reason" ngModel #Reason="ngModel">
+              </mat-form-field>
+
+              <mat-form-field class="example-full-width">
+                <label class="create-label">Expiry</label>
+                <input matInput placeholder="Expiry" type="date" name="Expiry" ngModel #Expiry="ngModel">
+              </mat-form-field>
+
+            </mat-card-content>
+
+            <div class="create-request-area">
+              <button type="submit" mat-stroked-button color="accent" class="create-btn"> Create Request</button>
+            </div>
+          </div>
+        </mat-card-content>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

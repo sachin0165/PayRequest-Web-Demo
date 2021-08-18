@@ -1,0 +1,166 @@
+body{
+	margin: 0;
+	padding: 0;
+}
+#main-container{
+	position: relative;
+}
+.container{
+	height: 600px;
+	
+	border-top: none;
+}
+.header{
+	margin-top: 20px;
+	background-color: #424242;
+    height: 30px;
+    display: block;
+    width: 80%;
+    margin: auto;
+    border-radius: 10px 10px 0 0;
+}
+.dots-class{
+	padding: 6px;
+}
+.header .dots{
+	display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: #666666;
+    border-radius:  50%;
+}
+.nav-header{
+	background-color: #2b9bf4;
+	border: 1px solid black;
+	height: 80px;
+	display: block;
+}
+.logo{
+	display: inline-block;
+	vertical-align: middle;
+	height: 100%;
+}
+.logo a{
+	color: white;
+    font-size: 36px;
+    text-decoration: none;
+    padding: 0 20px;
+    margin: auto;
+    height: 60px;
+    line-height: 80px;
+}
+.center-text{
+	margin: auto;
+    height: 100px;
+    width: 400px;
+    margin-top: 150px;
+    box-shadow: 0 0 20px rgb(2 2 4 / 20%)
+}
+.center-text a{
+	text-align: center;
+    display: block;
+    text-decoration: none;
+    color: #2b9bf4;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 36px 0;
+}
+.overlay {
+  position: absolute;
+  margin: auto;
+  width: 80%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 2;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 10px;
+  z-index: -1;
+}
+.pop-up{
+	margin: auto;
+    width: 60%;
+    margin-top: -35px;
+    background-color: #ffffff;
+    box-shadow: 0 0 20px rgb(2 2 4 / 20%);
+    border-radius: 10px;
+    z-index: 1;
+}
+.pop-up h2{
+	padding: 20px;
+	border-bottom: 2px solid #f3f3f3;
+	margin: 0;
+}
+.text-div{
+	width: 80%;
+    margin: auto;
+}
+.text-div label{
+	display: block;
+	border: 1px solid black;
+	height: 40px;
+	margin: 20px 0;
+	font-size: 15px;
+    padding: 0px 20px;
+    line-height: 36px;
+}
+.buttons{
+	border-top: 2px solid #f3f3f3;
+	text-align: right;
+	padding: 20px;
+}
+.buttons .cancle{
+	background-color: white;
+	color: black;
+	height: 35px;
+	width: 100px;
+	border-radius: 5px;
+	border: 1px solid #666666;
+	font-size: 14px;
+    font-weight: bold;
+    margin: 0 5px;
+}
+.buttons .login{
+	background-color: #337ab7;
+	color: white;
+	height: 35px;
+	width: 150px;
+	border-radius: 5px;
+	border: none;
+	font-size: 14px;
+    font-weight: bold;
+    margin: 0 5px;
+}
+@media screen and (max-width: 768px) {
+	.buttons{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.buttons .login{
+		margin: 10px 0;
+	}
+  
+}
+@media screen and (max-width: 425px) {
+	.buttons .cancle{
+		width: 70px;
+		font-size: 12px;
+	}
+	.buttons .login{
+		margin: 10px 0;
+		width: 100px;
+		font-size: 12px;
+	}
+	.pop-up h2{
+		font-size: 14px;
+	}
+  .text-div label {
+    height: 35px;
+    font-size: 12px;
+  }
+}
+

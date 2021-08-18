@@ -1,0 +1,19 @@
+<div class="pop-up createpayment">
+	<div class="form-head">
+	<h2>Request From</h2>
+	<p>{{fromAddress}}</p>
+	</div>
+	<div class="form-body">
+		<p class="form-top">Created on {{createdate}}</p>
+		<button *ngIf="this.paymentstatus == 10" class="awaiting" style="width: 15%;"> Awaiting Payment</button>
+		<button *ngIf="this.paymentstatus == 20" class="canceled"> Canceled</button>
+		<button *ngIf="this.paymentstatus == 30" class="pay"> Success</button>
+		<p class="form-buttom">{{amount}} SRC</p>
+		<p class="form-canceled">Canceled on {{cancellationdate}}</p>		
+	</div>
+
+	<div class="paymentdetails-btn-area">
+		<button class="create-pay-now" mat-button *ngIf="this.paymentstatus == 10" (click)="payNow()">Pay Now</button>
+		<button class="create-cancel-request" mat-button *ngIf="this.paymentstatus == 10" (click)="cancleRequestPayment()">Cancel Request</button>
+	</div>
+</div>
